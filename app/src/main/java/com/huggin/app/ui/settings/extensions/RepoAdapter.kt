@@ -59,13 +59,16 @@ class RepoAdapter(
                         actionButton.setImageResource(drawable)
                     }
 
+                    // Prebuilt repos are non-interactive - users cannot access them
+                    val isPrebuiltClickable = !isPrebuilt || isSetup
                     actionButton.setOnClickListener {
-                        imageClickCallback(item)
+                        if (isPrebuiltClickable) imageClickCallback(item)
                     }
 
                     repositoryItemRoot.setOnClickListener {
-                        clickCallback(item)
+                        if (isPrebuiltClickable) clickCallback(item)
                     }
+
                     mainText.text = item.name
                     subText.text = item.url
                     if (!item.iconUrl.isNullOrEmpty()) {
@@ -91,14 +94,15 @@ class RepoAdapter(
                         actionButton.setImageResource(drawable)
                     }
 
+                    // Prebuilt repos are non-interactive - users cannot access them
+                    val isPrebuiltClickable = !isPrebuilt || isSetup
                     actionButton.setOnClickListener {
-                        imageClickCallback(item)
+                        if (isPrebuiltClickable) imageClickCallback(item)
                     }
 
                     repositoryItemRoot.setOnClickListener {
-                        clickCallback(item)
+                        if (isPrebuiltClickable) clickCallback(item)
                     }
-
                     repositoryItemRoot.setOnLongClickListener {
                         val shareableRepoData =
                             "${item.name}$SHAREABLE_REPO_SEPARATOR\n ${item.url}"

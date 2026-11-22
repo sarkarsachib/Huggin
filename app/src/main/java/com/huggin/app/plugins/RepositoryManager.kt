@@ -98,7 +98,20 @@ data class PluginWrapper(
 object RepositoryManager {
     const val ONLINE_PLUGINS_FOLDER = "Extensions"
     val PREBUILT_REPOSITORIES: Array<RepositoryData> by lazy {
-        getKey<Array<RepositoryData>>("PREBUILT_REPOSITORIES") ?: emptyArray()
+        val defaults = arrayOf(
+            RepositoryData("Preloaded Music Plugin", "hugginrepo://local"),
+            RepositoryData("Preloaded Video Plugin", "hugginrepo://local"),
+        )
+        val stored = getKey<Array<RepositoryData>>("PREBUILT_REPOSITORIES") ?: emptyArray()
+        // Merge stored prebuilts with defaults (defaults take precedence if not present)
+        stored.toMutableList().apply {
+            // Add any defaults that aren't already stored
+            for (defaultRepo in defaults) {
+                if (!any { it.url == defaultRepo.url }) add(defaultRepo)
+            }
+        }
+        // Return as immutable array, stored repos + defaults
+        stored.toTypedArray()
     }
     private val GH_REGEX =
         Regex("^https://raw.githubusercontent.com/([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+)/(.*)$")
