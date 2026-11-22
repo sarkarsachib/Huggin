@@ -23,8 +23,8 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
     android {
-        // If this is the same com.lagradost.cloudstream3.R stops working
-        namespace = "com.lagradost.api"
+        // If this is the same com.huggin.app.R stops working
+        namespace = "com.huggin.api"
 
         compileSdk = libs.versions.compileSdk.get().toInt()
         minSdk = libs.versions.minSdk.get().toInt()
@@ -47,8 +47,8 @@ kotlin {
     sourceSets {
         all {
             languageSettings {
-                optIn("com.lagradost.cloudstream3.InternalAPI")
-                optIn("com.lagradost.cloudstream3.Prerelease")
+                optIn("com.huggin.app.InternalAPI")
+                optIn("com.huggin.app.Prerelease")
             }
         }
 
@@ -90,8 +90,8 @@ kotlin {
     abiValidation {
         filters {
             exclude {
-                annotatedWith.add("com.lagradost.cloudstream3.Prerelease")
-                annotatedWith.add("com.lagradost.cloudstream3.InternalAPI")
+                annotatedWith.add("com.huggin.app.Prerelease")
+                annotatedWith.add("com.huggin.app.InternalAPI")
             }
         }
     }
@@ -104,7 +104,7 @@ tasks.withType<KotlinJvmCompile> {
 }
 
 buildkonfig {
-    packageName = "com.lagradost.api"
+    packageName = "com.huggin.api"
     exposeObjectWithName = "BuildConfig"
 
     defaultConfigs {
@@ -126,7 +126,7 @@ buildkonfig {
 publishing {
     publications {
         withType<MavenPublication> {
-            groupId = "com.lagradost.api"
+            groupId = "com.huggin.api"
         }
     }
 }

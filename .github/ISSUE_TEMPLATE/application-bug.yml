@@ -1,5 +1,5 @@
 name: 🐞 Application Issue Report
-description: Report a issue in CloudStream
+description: Report a issue in Huggin
 labels: [bug]
 body:
 
@@ -37,11 +37,11 @@ body:
       required: true
 
   - type: input
-    id: cloudstream-version
+    id: huggin-version
     attributes:
-      label: Cloudstream version and commit hash
+      label: Huggin version and commit hash
       description: |
-        You can find your Cloudstream version in **Settings**. Commit hash is the 7 character string next to the version.
+        You can find your Huggin version in **Settings**. Commit hash is the 7 character string next to the version.
       placeholder: |
         Example: "2.8.16 a49f466"
     validations:

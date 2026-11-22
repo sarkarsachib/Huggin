@@ -6,8 +6,8 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.painter.Painter
-import com.lagradost.cloudstream4.generated.resources.Res
-import com.lagradost.cloudstream4.generated.resources.none
+import com.huggin.shared.generated.resources.Res
+import com.huggin.shared.generated.resources.none
 import com.mihon.common.preference.PreferenceData
 import org.jetbrains.compose.resources.stringResource
 

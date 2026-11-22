@@ -1,0 +1,43 @@
+package com.huggin.app.extractors
+
+import com.fasterxml.jackson.annotation.JsonProperty
+import com.huggin.app.SubtitleFile
+import com.huggin.app.app
+import com.huggin.app.utils.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+open class Acefile : ExtractorApi() {
+    override val name = "Acefile"
+    override val mainUrl = "https://acefile.co"
+    override val requiresReferer = false
+
+    override suspend fun getUrl(
+        url: String,
+        referer: String?,
+        subtitleCallback: (SubtitleFile) -> Unit,
+        callback: (ExtractorLink) -> Unit,
+    ) {
+        val id = "/(?:d|download|player|f|file)/(\\w+)".toRegex().find(url)?.groupValues?.get(1)
+        val script = getAndUnpack(app.get("$mainUrl/player/${id ?: return}").text)
+        val service = """service\s*=\s*['"]([^'"]+)""".toRegex().find(script)?.groupValues?.get(1)
+        val serverUrl = """['"](\S+check&id\S+?)['"]""".toRegex().find(script)?.groupValues?.get(1)
+            ?.replace("\"+service+\"", service ?: return)
+
+        val video = app.get(serverUrl ?: return, referer = "$mainUrl/").parsedSafe<Source>()?.data
+
+        callback.invoke(
+            newExtractorLink(
+                this.name,
+                this.name,
+                video ?: return,
+            )
+        )
+
+    }
+
+    @Serializable
+    data class Source(
+        @JsonProperty("data") @SerialName("data") val data: String? = null,
+    )
+}

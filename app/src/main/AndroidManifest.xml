@@ -75,7 +75,7 @@
     <!-- Without the large heap Exoplayer buffering gets reset due to OOM. -->
     <!--TODO https://stackoverflow.com/questions/41799732/chromecast-button-not-visible-in-android-->
     <application
-        android:name=".CloudStreamApp"
+        android:name=".HugginApp"
         android:allowBackup="true"
         android:appCategory="video"
         android:banner="@mipmap/ic_banner"
@@ -88,12 +88,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
+        android:usesCleartextTraffic="false"
         tools:targetApi="${target_sdk_version}">
 
         <meta-data
             android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
-            android:value="com.lagradost.cloudstream3.utils.CastOptionsProvider" />
+            android:value="com.huggin.app.utils.CastOptionsProvider" />
 
         <profileable
             android:shell="true"
@@ -106,7 +106,7 @@
             android:resizeableActivity="true"
             android:screenOrientation="userLandscape"
             android:supportsPictureInPicture="true"
-            android:taskAffinity="com.lagradost.cloudstream3.downloadedplayer"
+            android:taskAffinity="com.huggin.app.downloadedplayer"
             android:launchMode="singleTask"
             tools:ignore="DiscouragedApi">
             <intent-filter>
@@ -176,14 +176,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
-            <!-- cloudstreamplayer://encodedUrl?name=Dune -->
+            <!-- hugginplayer://encodedUrl?name=Dune -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamplayer" />
+                <data android:scheme="hugginplayer" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -191,7 +191,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamapp" />
+                <data android:scheme="hugginapp" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -199,7 +199,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamrepo" />
+                <data android:scheme="hugginrepo" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -209,18 +209,18 @@
 
                 <data android:scheme="csshare" />
             </intent-filter>
-            <!-- Allow searching with intents: cloudstreamsearch://Your%20Name -->
+            <!-- Allow searching with intents: hugginsearch://Your%20Name -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamsearch" />
+                <data android:scheme="hugginsearch" />
             </intent-filter>
 
             <!--
-            Allow opening from continue watching with intents: cloudstreamsearch://1234
+            Allow opening from continue watching with intents: hugginsearch://1234
             Used on Android TV Watch Next
              -->
             <intent-filter>
@@ -229,7 +229,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamcontinuewatching" />
+                <data android:scheme="huggincontinuewatching" />
             </intent-filter>
 
             <intent-filter android:autoVerify="false">

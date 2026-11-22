@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Home: returns to the main content screen -->
         <item
             android:id="@+id/navigation_home"
             android:icon="@drawable/home_icon_selector"
             android:title="@string/title_home" />
+        <!-- Search: find new content by keyword, API, or URL -->
         <item
             android:id="@+id/navigation_search"
             android:icon="@drawable/search_icon"
             android:title="@string/title_search" />
+        <!-- Library: my saved/shows and downloaded content -->
         <item
             android:id="@+id/navigation_library"
             android:icon="@drawable/library_icon_selector"
-            android:title="@string/library" />
+            android:title="@string/title_library" />
+        <!-- Downloads: queued and completed downloads -->
         <item
             android:id="@+id/navigation_downloads"
             android:icon="@drawable/netflix_download"
             android:title="@string/title_downloads" />
+        <!-- Settings: app preferences and account -->
         <item
             android:id="@+id/navigation_settings"
             android:icon="@drawable/settings_icon_selector"

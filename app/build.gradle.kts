@@ -103,7 +103,7 @@ android {
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.lagradost.cloudstream3"
+        applicationId = "com.huggin.app"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = libs.versions.versionCode.get().toInt()
@@ -211,7 +211,7 @@ android {
         }
     }
 
-    namespace = "com.lagradost.cloudstream3"
+    namespace = "com.huggin.app"
 }
 
 dependencies {
@@ -333,8 +333,8 @@ tasks.withType<KotlinJvmCompile> {
         jvmTarget.set(javaTarget)
         jvmDefault.set(JvmDefaultMode.ENABLE)
         optIn.addAll(
-            "com.lagradost.cloudstream3.InternalAPI",
-            "com.lagradost.cloudstream3.Prerelease",
+            "com.huggin.app.InternalAPI",
+            "com.huggin.app.Prerelease",
         )
     }
 }

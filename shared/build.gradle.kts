@@ -9,7 +9,7 @@ plugins {
 kotlin {
     android {
         // Must be unique
-        namespace = "com.lagradost.cloudstream4"
+        namespace = "com.huggin.shared"
         compileSdk = libs.versions.compileSdk.get().toInt()
         minSdk = libs.versions.minSdk.get().toInt()
 
@@ -27,8 +27,8 @@ kotlin {
     sourceSets {
         all {
             languageSettings {
-                optIn("com.lagradost.cloudstream3.InternalAPI")
-                optIn("com.lagradost.cloudstream3.Prerelease")
+                optIn("com.huggin.app.InternalAPI")
+                optIn("com.huggin.app.Prerelease")
             }
         }
 
@@ -61,6 +61,6 @@ dependencies {
 
 compose.resources {
     publicResClass = true
-    packageOfResClass = "com.lagradost.cloudstream4.generated.resources"
+    packageOfResClass = "com.huggin.shared.generated.resources"
     generateResClass = auto
 }

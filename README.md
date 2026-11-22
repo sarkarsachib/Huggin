@@ -1,7 +1,7 @@
-# CloudStream
+# Huggin
 
 **⚠️ Warning: By default, this app doesn't provide any video sources; you have to install extensions to add functionality to the app.**
-<p align="left"><a href="https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk"><img src=".github/images/download-cloudstream-pre.png" alt="Download Cloudstream Pre-Release" width=430/></a></p>
+<p align="left"><a href="https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk"><img src=".github/images/download-huggin-pre.png" alt="Download Huggin Pre-Release" width=430/></a></p>
 
 [![Discord](https://invidget.switchblade.xyz/5Hus6fM)](https://discord.gg/5Hus6fM)
 
@@ -22,9 +22,9 @@
 
 ## About us: 
 
-**CloudStream is a media center that prioritizes and emphasizes complete freedom and flexibility for users and developers.** 
+**Huggin is a media center that prioritizes and emphasizes complete freedom and flexibility for users and developers.** 
 
-CloudStream is an extension-based multimedia player with tracking support. There are extensions to view videos from: 
+Huggin is an extension-based multimedia player with tracking support. There are extensions to view videos from: 
 
 + [Librevox (audio-books)](https://librivox.org/) 
 + [Youtube](https://www.youtube.com/)
@@ -38,7 +38,7 @@ CloudStream is an extension-based multimedia player with tracking support. There
 
 #### Important Copyright Note: 
 
-Our documentation is unmaintained and open to contributions; therefore, apps and sources, extensions in recommended sources, and recommended apps are not officially moderated or endorsed by CloudStream; if you or another copyright owner identify an extension that breaches your copyright, please let us know. 
+Our documentation is unmaintained and open to contributions; therefore, apps and sources, extensions in recommended sources, and recommended apps are not officially moderated or endorsed by Huggin; if you or another copyright owner identify an extension that breaches your copyright, please let us know. 
 
 
 #### Features:
@@ -54,14 +54,14 @@ Our documentation is unmaintained and open to contributions; therefore, apps and
 
 ## Installation: 
 
-Our documentation provides the steps to install and configure CloudStream for your streaming needs.
+Our documentation provides the steps to install and configure Huggin for your streaming needs.
 
-[Getting Started With CloudStream:](https://recloudstream.github.io/csdocs/)
+[Getting Started With Huggin:](https://recloudstream.github.io/csdocs/)
 
 <a id="contributing"></a>
 
 ## Contributing:
-We **happily** accept any contributions to our project. To find out where you can start contributing towards the project, please look [at our issues tab](/cloudstream/issues)
+We **happily** accept any contributions to our project. To find out where you can start contributing towards the project, please look [at our issues tab](/huggin/issues)
 
 
 
@@ -84,7 +84,7 @@ While we **actively** accept issues and pull requests, we do require you fill ou
 
 ### Extensions:
  
-**Further details on creating extensions for CloudStream are found in our documentation.**
+**Further details on creating extensions for Huggin are found in our documentation.**
 
 [Guide: For Extension Developers](https://recloudstream.github.io/csdocs/devs/gettingstarted/) 
 
@@ -94,7 +94,7 @@ While we **actively** accept issues and pull requests, we do require you fill ou
 
 As well as providing clear install steps, our [website](https://dweb.link/ipns/cloudstream.on.fleek.co/) includes a wide variety of other tools, such as: 
 - [Troubleshooting](https://recloudstream.github.io/csdocs/troubleshooting/)
-- [Further CloudStream Repositories](https://recloudstream.github.io/csdocs/repositories/) 
+- [Further Huggin Repositories](https://recloudstream.github.io/csdocs/repositories/) 
 - Set-Up for other devices, such as:
   - [Android TV](https://recloudstream.github.io/csdocs/other-devices/tv/)
   - [Windows](https://recloudstream.github.io/csdocs/other-devices/windows/)

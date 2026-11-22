@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+  <!-- Exclude sync-provider tokens and credentials from backup -->
+  <exclude path="shared_prefs/" />
+  <exclude path="databases/" />
+</full-backup-content>

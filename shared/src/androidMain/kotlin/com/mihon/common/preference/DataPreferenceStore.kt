@@ -2,8 +2,8 @@ package com.mihon.common.preference
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.lagradost.cloudstream3.utils.AppUtils.parseJson
-import com.lagradost.cloudstream3.utils.AppUtils.toJsonLiteral
+import com.huggin.app.utils.AppUtils.parseJson
+import com.huggin.app.utils.AppUtils.toJsonLiteral
 import kotlinx.coroutines.flow.MutableSharedFlow
 
 /**

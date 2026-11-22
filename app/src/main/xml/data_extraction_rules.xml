@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules xmlns:android="http://schemas.android.com/apk/res/android"
+    android:hasFingerprint="false">
+  <!-- Exclude sync-provider tokens and credentials from cloud backup -->
+  <exclude>
+    <path>shared_prefs/*</path>
+  </exclude>
+  <exclude>
+    <path>databases/*</path>
+  </exclude>
+</data-extraction-rules>
